@@ -37,7 +37,7 @@ export default function Login() {
     }
     else {
       // setLoading(!loading)
-      axios.post(`${window.location.origin}/login`, user).then((res) => {
+      axios.post(`https://whatsapp-clone-backend-seven.vercel.app/login`, user).then((res) => {
         // setLoading(!loading)
         if (res.data.mes === 'Login Successfull') {
           toast.success(res.data.mes, {
