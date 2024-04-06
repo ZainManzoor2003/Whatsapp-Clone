@@ -16,7 +16,7 @@ export default function AddContact() {
     const { allUsers, setAllUsers, tempAllUsers, settempAllUsers,
         contacts, setContacts, settempContacts, tempContacts, auth, setAuth } = useContext(CreateContextApi);
     useEffect(() => {
-        id && axios.post(`${window.location.origin}/verifyAddContacts`, { cookie: Cookies.get(`token${id}`) }).then((res) => {
+        id && axios.post(`https://whatsapp-clone-backend-seven.vercel.app/verifyAddContacts`, { cookie: Cookies.get(`token${id}`) }).then((res) => {
             if (res.data.mes !== 'Success') {
                 setAuth(false)
                 navigate('/')
