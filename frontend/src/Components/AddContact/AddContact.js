@@ -42,7 +42,7 @@ export default function AddContact() {
     //     settempContacts(res);
     // }
     const getAllUsers = async () => {
-        let data = await fetch(`${window.location.origin}/getAllUsers`);
+        let data = await fetch(`https://whatsapp-clone-backend-seven.vercel.app/getAllUsers`);
         let res = await data.json();
         removeCurrentUser(res)
     }
@@ -65,7 +65,7 @@ export default function AddContact() {
         settempContacts([...tempContacts, user])
     }
     const addContact = async (user) => {
-        axios.post(`${window.location.origin}/addContact/${id}`, user)
+        axios.post(`https://whatsapp-clone-backend-seven.vercel.app/addContact/${id}`, user)
             .then((res) => {
                 if (res.data.mes === 'Contact Added Successfully') {
                     removeAddedUser(user);
