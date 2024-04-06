@@ -47,7 +47,7 @@ export default function MyProfile() {
             });
         }
         else {
-            axios.post(`${window.location.origin}/updateProfile/${id}/reciever`, a.currentUser).then((res) => {
+            axios.post(`https://whatsapp-clone-backend-seven.vercel.app/updateProfile/${id}/reciever`, a.currentUser).then((res) => {
                 if (res.data.mes === 'Account Updated Succesfully') {
                     toast.success(res.data.mes, {
                         autoClose: 1000
