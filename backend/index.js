@@ -7,7 +7,13 @@ const connection = require('./connection.js')
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors(
+     {
+        origin:["https://whatsapp-clone-frontend-tau.vercel.app","https://whatsapp-clone-frontend-tau.vercel.app/"],
+        methods:["POST","GET"],
+        credentials:true
+    }
+));
 app.use('/', router)
 const port = 3001;
 
