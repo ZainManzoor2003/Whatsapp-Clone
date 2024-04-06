@@ -92,7 +92,7 @@ export default function Register() {
     }
     else {
       // setLoading(!loading)
-      axios.post(`${window.location.origin}/register`, user)
+      axios.post(`https://whatsapp-clone-backend-seven.vercel.app/register`, user)
         .then((res) => {
           if (res.data.mes === 'Account Registered Succesfully') {
             toast.success(res.data.mes, {
