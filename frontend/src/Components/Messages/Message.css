@@ -1,0 +1,166 @@
+.messages {
+    width: 70%;
+    height: 100vh;
+    background-image: url('./message\ background.jpg');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    border-left: 1px solid #202c33e7;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.messages .top-section {
+    width: 100%;
+    background-color: #202c33e7;
+    display: flex;
+    padding: 7px 20px;
+}
+
+.messages .top-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
+    padding: 5px 15px;
+    gap: 3px;
+}
+
+.top-heading h1 {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.top-heading span {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13.5px;
+    font-weight: lighter;
+}
+
+.messages .bottom-section {
+    width: 100%;
+    background-color: #202c33a1;
+    /* position: absolute;
+    bottom: 20px; */
+    display: flex;
+    padding: 15px 10px;
+}
+
+.bottom-section .plus-icon {
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.bottom-section .message-input {
+    display: flex;
+    background-color: #202c33;
+    width: 90%;
+    border: 1px solid #202c33;
+    border-radius: 5px;
+}
+
+.message-input input {
+    height: 100%;
+    padding-left: 20px;
+    font-size: 15px;
+    width: 100%;
+    outline: none;
+    background-color: #202c33;
+    border: none;
+    color: rgba(255, 255, 255, 0.9);
+    padding-right: 20px;
+}
+
+.message-input span {
+    font-size: 23px;
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.bottom-section .voice-icon,
+.send-icon {
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.messages .all-messages {
+    height: 80vh;
+    /* background-color: rgba(255,255,255,0.3); */
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    padding: 30px 0px;
+    /* overflow-anchor: none; */
+}
+
+.messages .all-messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.messages .all-messages::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #202c33;
+}
+
+.all-messages .message,.message-jus {
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    margin: 5px 40px;
+    /* position: relative; */
+}
+.message-jus{
+    justify-content: end;
+}
+.message p, .message-jus p{
+    width: fit-content;
+    max-width: 50%;
+    font-size: 14px;
+    padding: 7px 10px;
+    border-radius: 5px;
+}
+.send-message{
+    background-color: #004e40;
+}
+.recieve-message{
+    background-color: #202c33;
+}
+.message p span,.message-jus p span{
+    color: rgba(255,255,255,0.5);
+    font-size: 10px;
+    margin-top: 7px;
+    margin-left: 5px;
+    float: right;
+}
+.message .send{
+    background-color: #004e40;
+} 
+.image{
+    position: relative;
+    width: 35%;
+}
+.image .image-message-time{
+    color: rgba(255,255,255,0.5);
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 10px;
+}
+
+
+.emoji-picker{
+    position: absolute;
+    right: 50px;
+    bottom: 80px;
+    transform: scale3d(1,1,1);
+}

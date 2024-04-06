@@ -1,0 +1,35 @@
+.add-contacts-allcontacts{
+    width: 80%;
+    height: 200px;
+    overflow-y: scroll;
+    border: 2px solid #25D366;
+    padding: 5px 5px;
+}
+.add-contacts-contact{
+    cursor: pointer;
+    display: flex;
+    padding: 5px 15px;
+
+}
+.add-contacts-contact:hover{
+    /* background-color: rgba(169, 169, 169, 0.595); */
+    background-color: #00a884;
+}
+.add-contacts-contact .left-section{
+    width: auto;
+}
+.add-contacts-contact .left-section img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+.add-contacts-contact .right-section{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.add-contacts-contact h3{
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.658);
+}
