@@ -72,7 +72,7 @@ export default function Message() {
     a.setMessages([...a.messages, messageObj])
     a.setTempMessages([...a.tempMessages, messageObj])
     socket.current.emit('sendMessage', messageObj);
-    axios.post(`${window.location.origin}/sendMessage/${id}/${reciever}`, messageObj)
+    axios.post(`https://whatsapp-clone-backend-seven.vercel.app/sendMessage/${id}/${reciever}`, messageObj)
       .then((res) => {
         if (res.data.mes === 'Success') {
           setMessage({ message: '', type: 'text' });
