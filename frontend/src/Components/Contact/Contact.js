@@ -78,13 +78,13 @@ export default function Contact() {
     }
   }, [])
   const getMessages = async () => {
-    let data = await fetch(`${window.location.origin}/getMessages`);
+    let data = await fetch(`https://whatsapp-clone-backend-seven.vercel.app/getMessages`);
     let res = await data.json();
     a.setMessages(res);
     a.setTempMessages(res);
   }
   const getUserDetails = async () => {
-    let data = await fetch(`${window.location.origin}/getUserDetails/${id}/reciever`);
+    let data = await fetch(`https://whatsapp-clone-backend-seven.vercel.app/getUserDetails/${id}/reciever`);
     let res = await data.json();
     a.setCurrentUser({
       name: res.name,
@@ -96,7 +96,7 @@ export default function Contact() {
   }
 
   const getContacts = async () => {
-    let data = await fetch(`${window.location.origin}/getContacts/${id}/reciever`);
+    let data = await fetch(`https://whatsapp-clone-backend-seven.vercel.app/getContacts/${id}/reciever`);
     let res = await data.json();
     a.setContacts(res);
     a.settempContacts(res);
