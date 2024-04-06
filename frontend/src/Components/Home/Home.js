@@ -13,7 +13,7 @@ export default function Home() {
   const {id}=useParams();
   const navigate = useNavigate();
   useEffect(() => {
-      id && axios.post(`${window.location.origin}/verifyHome`, { cookie: Cookies.get(`token${id}`) }).then((res) => {
+      id && axios.post(`https://whatsapp-clone-backend-seven.vercel.app/verifyHome`, { cookie: Cookies.get(`token${id}`) }).then((res) => {
         if (res.data.mes !== 'Success') {
           setAuth(false)
           navigate('/')
