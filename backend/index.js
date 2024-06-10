@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors(
      {
-        origin:["https://whatsapp-clone-frontend-tau.vercel.app","https://whatsapp-clone-frontend-tau.vercel.app/"],
+        origin:[],
         methods:["POST","GET"],
         credentials:true
     }
